@@ -1,0 +1,73 @@
+<form>
+  <app-tap></app-tap>
+  <div class="img-resize">
+    <img src="../../assets/LogoOmise.jpg">
+  </div>
+  <div class="container">
+    <td>
+      <h3>Please fill in all information.</h3>
+    </td>
+    <tr>
+      <td>
+        <label>Credit Card : </label>
+      </td>
+      <td>
+        <input type="text" name="creditNumber" placeholder="xxxx-xxxx-xxxx-xxxx" style="text-align: center" maxlength="16" onKeyUp="if(isNaN(this.value)){ 
+                    alert('Please enter only numbers.'); 
+                    this.value='';
+                  }">
+        <br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Full Name : </label>
+      </td>
+      <td>
+        <input type="text" name="name" placeholder="Full Name" style="text-align: center" onKeyUp="if(!(isNaN(this.value))){ 
+                                                    alert('Please enter only characters.');   
+                                                    this.value='';
+                                                     }">
+        <br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>CVV/CVC : </label>
+      </td>
+      <td>
+        <input type="text" name="cvv" placeholder="CVV or CVC" style="text-align: center" min="3" maxlength="3" onKeyUp="if(isNaN(this.value)){ 
+          alert('Please enter only numbers.'); 
+          this.value='';
+        }">
+        <br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Expire(MM/YY) : </label>
+      </td>
+      <td>
+        <input type="text" name="monthExpireDate" placeholder="MM" style="text-align: center" maxlength="2" onKeyUp="if(isNaN(this.value)){ 
+          alert('Please enter only numbers.'); 
+          this.value='';
+        }">
+        <br>
+      </td>
+      <td>/
+      </td>
+      <td>
+        <input type="text" name="yearExpireDate" placeholder="YY" style="text-align: center" maxlength="2" onKeyUp="if(isNaN(this.value)){ 
+          alert('Please enter only numbers.'); 
+          this.value='';
+        }">
+        <br>
+      </td>
+    </tr>
+  </div>
+  <li style="list-style-type: none">
+    <a routerLink="/rr">
+      <button type="submit" name="price" value="30">Pay now : 30 ฿ </button>
+    </a>
+  </li>
+</form>

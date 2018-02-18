@@ -1,0 +1,13 @@
+<app-tap></app-tap>
+<div style="margin-top: 1.6cm">
+    <div>
+        <nav class="navbar navbar-dark fixed-top" style="margin-top: 1.6cm">
+            <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" 
+                #search [formControl]="searchControl">
+        </nav>
+        <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+            <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+        </agm-map>
+
+    </div>
+</div>

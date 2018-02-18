@@ -1,0 +1,15 @@
+
+.title{
+    text-align: center;
+    font-size: 20px;
+    background-color: #fd9013;
+    padding: 10px;
+}
+.detail{
+    text-align: center;
+    padding: 20px;
+}
+.detail .container a{ 
+    color: black;
+   
+}

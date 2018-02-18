@@ -1,0 +1,22 @@
+h1{
+    margin: auto;
+    margin-top: 0.3cm;
+    text-align: center;
+}
+agm-map {
+    height: 100vh;
+  }
+
+  body {
+    padding-top: 5rem;
+  }
+  .starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  .size{
+    width: 64px;
+	height: 64px;
+	overflow: hidden;
+	text-align: center;
+  }
