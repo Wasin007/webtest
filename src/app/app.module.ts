@@ -20,6 +20,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { TravelComponent } from './travel/travel.component';
 import {} from '@types/googlemaps';
+import { NotiComponent } from './noti/noti.component';
+import { HistoryComponent } from './history/history.component';
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import {} from '@types/googlemaps';
     PayComponent,
     MapComponent,
     AccountComponent,
-    TravelComponent
+    TravelComponent,
+    NotiComponent,
+    HistoryComponent,
+    HelpComponent
 
   ],
   imports: [

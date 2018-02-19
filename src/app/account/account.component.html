@@ -2,27 +2,45 @@
 <div class="title">
   Account
 </div>
-<div class="detail">
+<div class="img-resize" style="margin-top: 1cm">
   <img src='../../assets/user-icon.png' width="80px">
-  <br>
-  <br>
-  <p>Firstname :</p>
-  <br>
-  <p>Lastname :</p>
-  <br>
-  <p>Telephone number :</p>
-  <br>
-  <p>E-mail :</p>
-  <div class="container">
-    <li style="list-style-type: none">
-      <a routerLink="/index/">
-        <button type="submit">Sign out with Facebook</button>
-      </a>
-    </li>
-    <br>
-    <br>
-    <a href="">Setting</a>
-    <br>
-    <br>
-  </div>
 </div>
+<div class="container">
+  <br>
+  <br>
+  <tr>
+    <td>
+      <label>Full Name : </label>
+    </td>
+    <td>
+      <input type="text" name="name" placeholder="{{fName}}   {{lName}}" style="text-align: center">
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>Telephone Number : </label>
+    </td>
+    <td>
+      <input type="text" name="tel" placeholder={{tel}} style="text-align: center" min="10" maxlength="10" onKeyUp="if(isNaN(this.value)){ 
+              alert('Please enter only numbers.'); 
+              this.value='';
+            }">
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>Email address : </label>
+    </td>
+    <td>
+      <input type="text" name="email" placeholder={{email}}>
+      <br>
+    </td>
+  </tr>
+</div>
+<li style="list-style-type: none">
+  <a routerLink="/rr">
+    <button type="submit">Update</button>
+  </a>
+</li>
