@@ -12,11 +12,14 @@ import { HomeComponent } from './home/home.component';
 import { TapComponent } from './tap/tap.component';
 import { PayComponent } from './pay/pay.component';
 import { MapComponent } from './map/map.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarJSModule } from 'ng-sidebarjs';
 import { AccountComponent } from './account/account.component';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { TravelComponent } from './travel/travel.component';
+import {} from '@types/googlemaps';
 
 @NgModule({
   declarations: [
@@ -25,21 +28,23 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     TapComponent,
     PayComponent,
     MapComponent,
-    AccountComponent 
-    
+    AccountComponent,
+    TravelComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    MatSlideToggleModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
     SidebarJSModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: "API-KEY",
-      libraries:["places"]
+      libraries: ["places"]
     })
   ],
   providers: [],

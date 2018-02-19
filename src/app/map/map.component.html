@@ -1,13 +1,20 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <app-tap></app-tap>
 <div style="margin-top: 1.6cm">
     <div>
         <nav class="navbar navbar-dark fixed-top" style="margin-top: 1.6cm">
-            <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" 
-                #search [formControl]="searchControl">
+            <div class="search-container">
+                    <input placeholder="search..." id="myInput" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"
+                        #search [formControl]="searchControl" style="width: 30%">
+                    <button type="submit">
+                        <i class="fa fa-close" onclick="document.getElementById('myInput').value = ''"></i>
+                    </button>
+            </div>
         </nav>
         <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
             <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
         </agm-map>
-
     </div>
 </div>
